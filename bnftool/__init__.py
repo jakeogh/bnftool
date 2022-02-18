@@ -1,1 +1,1 @@
-#from .bnftool import bnftool
+from .bnftool import get_bnf_syntax

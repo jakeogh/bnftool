@@ -42,13 +42,13 @@ from clicktool import click_global_options
 from clicktool import tv
 from eprint import eprint
 from mptool import output
+from mptool import unmp
 from retry_on_exception import retry_on_exception
-#from unmp import unmp
+#from mptool import unmp
 #from prettyprinter import cpprint
 #from prettyprinter import install_extras
 #install_extras(['attrs'])
 from timetool import get_timestamp
-from unmp import unmp
 
 #from prettytable import PrettyTable
 #output_table = PrettyTable()
@@ -58,6 +58,20 @@ from unmp import unmp
 #from pkg_resources import iter_entry_points
 
 signal(SIGPIPE, SIG_DFL)
+
+
+def get_bnf_syntax():
+    BNF_syntax = {
+        '< >': 'Defined element',
+        '=': 'is defined as',
+        '|': 'exclusive OR',
+        '{ }': 'Group; one element is required',
+        '[ ]': 'Optional; can be omitted',
+        '. . .': 'Previous element(s) may be repeatsd',
+        '( )': 'Comment',
+        }
+    return BNF_syntax
+
 
 #@with_plugins(iter_entry_points('click_command_tree'))
 @click.group(no_args_is_help=True, cls=AHGroup)
@@ -87,17 +101,7 @@ def syntax(ctx,
                       verbose_inf=verbose_inf,
                       )
 
-    BNF_syntax = {
-        '< >': 'Defined element',
-        '=': 'is defined as',
-        '|': 'exclusive OR',
-        '{ }': 'Group; one element is required',
-        '[ ]': 'Optional; can be omitted',
-        '. . .': 'Previous element(s) may be repeatsd',
-        '( )': 'Comment',
-        }
-
-    output(BNF_syntax, tty=tty, verbose=verbose)
+    output(get_bnf_syntax(), tty=tty, verbose=verbose)
 
 
 #@cli.command()
