@@ -78,9 +78,6 @@ def cli(ctx,
 @click_add_options(click_global_options)
 @click.pass_context
 def syntax(ctx,
-           paths: Sequence[str],
-           sysskel: Path,
-           ipython: bool,
            verbose: Union[bool, int, float],
            verbose_inf: bool,
            ) -> None:
