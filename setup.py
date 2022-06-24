@@ -10,7 +10,11 @@ import fastentrypoints
 if not sys.version_info[0] == 3:
     sys.exit("Python 3 is required. Use: 'python3 setup.py install'")
 
-dependencies = ["icecream", "click"]
+dependencies = [
+    "icecream",
+    "click",
+    "click-auto-help @ git+https://git@github.com/jakeogh/click-auto-help",
+]
 
 config = {
     "version": "0.1",
