@@ -14,6 +14,7 @@ dependencies = [
     "icecream",
     "click",
     "click-auto-help @ git+https://git@github.com/jakeogh/click-auto-help",
+    "mptool @ git+https://git@github.com/jakeogh/mptool",
 ]
 
 config = {
