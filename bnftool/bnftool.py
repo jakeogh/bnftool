@@ -19,28 +19,18 @@
 # pylint: disable=no-member                       # [E1101] no member for base
 # pylint: disable=attribute-defined-outside-init  # [W0201]
 # pylint: disable=too-many-boolean-expressions    # [R0916] in if statement
+from __future__ import annotations
 
-# import os
-# import sys
-# import time
-# from pathlib import Path
 from signal import SIG_DFL
 from signal import SIGPIPE
 from signal import signal
 
 import click
-# from asserttool import ic
 from click_auto_help import AHGroup
 from clicktool import click_add_options
 from clicktool import click_global_options
 from clicktool import tv
 from mptool import output
-
-# from typing import Iterable
-# # from collections.abc import Sequence
-
-
-
 
 signal(SIGPIPE, SIG_DFL)
 
