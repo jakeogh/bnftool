@@ -13,6 +13,7 @@ if not sys.version_info[0] == 3:
 dependencies = [
     "icecream",
     "click",
+    "clicktool @ git+https://git@github.com/jakeogh/clicktool",
     "click-auto-help @ git+https://git@github.com/jakeogh/click-auto-help",
     "mptool @ git+https://git@github.com/jakeogh/mptool",
 ]
