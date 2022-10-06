@@ -55,6 +55,7 @@ def cli(
     ctx,
     verbose: bool | int | float,
     verbose_inf: bool,
+    dict_output: bool,
 ) -> None:
 
     tty, verbose = tv(
