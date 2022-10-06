@@ -82,5 +82,10 @@ def syntax(
     )
 
     output(
-        get_bnf_syntax(), reason=None, tty=tty, dict_output=dict_output, verbose=verbose
+        get_bnf_syntax(),
+        reason=None,
+        tty=tty,
+        pretty_print=True,
+        dict_output=dict_output,
+        verbose=verbose,
     )
