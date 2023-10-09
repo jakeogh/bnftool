@@ -53,9 +53,9 @@ def get_bnf_syntax():
 @click.pass_context
 def cli(
     ctx,
-    verbose: bool | int | float,
     verbose_inf: bool,
     dict_output: bool,
+    verbose: bool = False,
 ) -> None:
 
     tty, verbose = tv(
@@ -70,9 +70,9 @@ def cli(
 @click.pass_context
 def syntax(
     ctx,
-    verbose: bool | int | float,
     verbose_inf: bool,
     dict_output: bool,
+    verbose: bool = False,
 ) -> None:
 
     tty, verbose = tv(
