@@ -10,7 +10,6 @@ dependencies = [
     "clicktool @ git+https://git@github.com/jakeogh/clicktool",
     "click-auto-help @ git+https://git@github.com/jakeogh/click-auto-help",
     "mptool @ git+https://git@github.com/jakeogh/mptool",
-    "icecream @ git+https://git@github.com/jakeogh/icecream",
 ]
 
 config = {
